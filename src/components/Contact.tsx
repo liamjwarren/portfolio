@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
+import { FEATURE_FLAGS } from '../config/features';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -10,18 +11,21 @@ const Contact = () => {
   const contacts = [
     {
       icon: Mail,
-      label: 'your.email@example.com',
-      href: 'mailto:your.email@example.com',
+      label: 'liamjwarren@gmail.com',
+      href: 'mailto:liamjwarren@gmail.com',
+      external: false,
     },
     {
       icon: Github,
       label: 'GitHub',
-      href: 'https://github.com/yourusername',
+      href: 'https://github.com/liamjwarren',
+      external: true,
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
-      href: 'https://linkedin.com/in/yourusername',
+      href: 'https://linkedin.com/in/liamjwarren',
+      external: true,
     },
   ];
 
@@ -44,8 +48,23 @@ const Contact = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <p className="contact-description">
-          I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+          Let's connect! I'm always interested in discussing technology, sharing ideas, or exploring potential collaborations.
         </p>
+        {FEATURE_FLAGS.SHOW_RESUME && (
+          <motion.a
+            href="/resume/Liam_Warren_Resume.pdf"
+            download
+            className="btn btn-primary"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{ scale: 1.05, y: -3 }}
+            whileTap={{ scale: 0.95 }}
+            style={{ marginBottom: '2rem', display: 'inline-block' }}
+          >
+            Download My Resume
+          </motion.a>
+        )}
         <div className="contact-methods">
           {contacts.map((contact, index) => {
             const Icon = contact.icon;
@@ -54,6 +73,8 @@ const Contact = () => {
                 key={contact.label}
                 href={contact.href}
                 className="contact-item"
+                target={contact.external ? "_blank" : undefined}
+                rel={contact.external ? "noopener noreferrer" : undefined}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}

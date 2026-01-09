@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { FEATURE_FLAGS } from '../config/features';
 
 const Hero = () => {
   const containerVariants = {
@@ -30,15 +31,27 @@ const Hero = () => {
         initial="hidden"
         animate="visible"
       >
+        <motion.div 
+          className="hero-photo-wrapper"
+          variants={itemVariants}
+        >
+          <div className="hero-photo">
+            <img src="/profile.jpg" alt="Liam Warren" />
+          </div>
+        </motion.div>
+        <motion.div className="hero-greeting" variants={itemVariants}>
+          <span className="wave">👋</span> Hi, I'm
+        </motion.div>
         <motion.h1 className="hero-title" variants={itemVariants}>
-          Hi, I'm <span className="gradient-text">Your Name</span>
+          <span className="gradient-text">Liam Warren</span>
         </motion.h1>
         <motion.p className="hero-subtitle" variants={itemVariants}>
-          Full Stack Developer & Creative Problem Solver
+          Software Developer & Scrum Master at <span className="company-highlight">Nokia</span>
         </motion.p>
-        <motion.p className="hero-description" variants={itemVariants}>
-          I build exceptional digital experiences that live on the internet.
-        </motion.p>
+        <motion.div className="hero-description" variants={itemVariants}>
+          {/* <p className="hero-tagline">Full-stack developer building secure, scalable software for <strong>NetGuard Cybersecurity Dome</strong>, a hybrid SaaS/on-premises platform</p> */}
+          <p className="hero-degree">B.Eng. Computer Engineering (CO-OP), Memorial University</p>
+        </motion.div>
         <motion.div className="hero-buttons" variants={itemVariants}>
           <motion.a
             href="#projects"
@@ -48,6 +61,17 @@ const Hero = () => {
           >
             View My Work
           </motion.a>
+          {FEATURE_FLAGS.SHOW_RESUME && (
+            <motion.a
+              href="/resume/Liam_Warren_Resume.pdf"
+              download
+              className="btn btn-secondary"
+              whileHover={{ scale: 1.05, y: -3 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Download Resume
+            </motion.a>
+          )}
           <motion.a
             href="#contact"
             className="btn btn-secondary"

@@ -1,5 +1,4 @@
 import { motion } from 'framer-motion';
-import { Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -9,10 +8,7 @@ const Footer = () => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <p>
-        Designed & Built with <Heart size={16} className="heart-icon" /> by Your Name
-      </p>
-      <p className="footer-year">&copy; 2025</p>
+      <p className="footer-year">&copy; 2026 Liam Warren. All rights reserved.</p>
     </motion.footer>
   );
 };

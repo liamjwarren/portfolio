@@ -6,7 +6,7 @@ const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
-  const skills = ['React', 'TypeScript', 'Node.js', 'UI/UX', 'CSS3', 'Git'];
+  const skills = ['Azure', 'Kubernetes', 'Terraform', 'TypeScript', 'React', 'Prometheus', 'Grafana', 'OpenShift', 'CI/CD', 'Docker', 'GraphQL', 'MongoDB'];
 
   return (
     <section id="about" className="section about-section" ref={ref}>
@@ -28,10 +28,13 @@ const About = () => {
       >
         <div className="about-text">
           <p>
-            I'm a passionate developer with a love for creating beautiful,
-            functional, and user-centered digital experiences. With expertise
-            in modern web technologies, I bring ideas to life through clean code
-            and innovative solutions.
+            I'm a Software Developer and Scrum Master at Nokia, driving the delivery of high-impact features for the NetGuard Cybersecurity Dome, a hybrid SaaS platform spanning Azure and on-premises infrastructure. I lead cross-functional teams, coordinate complex dependencies, and turn business priorities into actionable roadmaps, ensuring secure, scalable, and reliable software reaches production efficiently.
+          </p>
+          <p>
+            Hands-on across the stack, I build and maintain CI/CD pipelines, improve Terraform-based Infrastructure-as-Code, and manage production environments on Kubernetes and OpenShift. I design and develop monitoring and observability solutions using Prometheus, OpenTelemetry, Thanos, Grafana, and Datadog, helping teams maintain system health, performance, and reliability at scale.
+          </p>
+          <p>
+            Outside of work, I continue to explore full-stack development, building apps and tools with React, TypeScript, and other modern technologies. These personal projects let me experiment, stay sharp, and fuel my curiosity for end-to-end software development.
           </p>
           <div className="skills">
             {skills.map((skill, index) => (
