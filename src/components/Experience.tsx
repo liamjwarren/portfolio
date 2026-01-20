@@ -7,7 +7,7 @@ interface Job {
   company: string;
   position: string;
   period: string;
-  description: string;
+  description?: string;
   achievements: string[];
   technologies: string[];
 }
@@ -21,70 +21,67 @@ const Experience = () => {
       company: 'Nokia',
       position: 'Software Developer',
       period: 'Jul 2025 - Present',
-      description: 'Scrum Master and Software Developer for the NetGuard Cybersecurity Dome DevOps team, leading delivery of critical features across multiple releases while acting as primary liaison to Product Line Management.',
+      // description: 'Scrum Master and Software Developer for the NetGuard Cybersecurity Dome DevOps team, leading delivery of critical features across multiple releases while acting as primary liaison to Product Line Management.',
       achievements: [
-        'Act as Application SRE for production environments, managing incident triage and operational health',
-        'Coordinate with stakeholders and customers, supporting POC deployments and customer onboarding',
-        'Contribute across Azure SaaS platform, monitoring/observability solutions, and Kubernetes/OpenShift infrastructure',
+        'Own planning, delivery, and implementation of platform and DevOps features for a telecommunications cybersecurity SaaS application, collaborating with product and engineering teams as Scrum Master to translate requirements, refine the backlog, plan sprints, and increase on-time feature delivery by 30%.',
+        'Optimize full-stack deployments on Azure SaaS and on-prem Kubernetes/OpenShift, cutting deployment time by 20% and accelerating maintenance window upgrades.',
+        'Lead investigation and resolution of production issues as Application SRE, reducing mean time to resolution by 40% and improving availability across SaaS and on-prem environments on Azure, Kubernetes, and OpenShift.',
       ],
-      technologies: ['Team Management', 'Azure', 'Kubernetes', 'OpenShift', 'SRE'],
+      technologies: ['Team Management', 'Azure', 'Kubernetes', 'OpenShift', 'SRE', 'Agile/Scrum Leadership', 'Problem Solving'],
     },
     {
       company: 'Nokia',
       position: 'Junior Software Developer',
       period: 'Jun 2023 - Jul 2025',
-      description: 'Worked on NetGuard Cybersecurity Dome, an award-winning XDR security orchestration platform for telecom providers and critical infrastructure. Served as Scrum Master and developer for the DevOps team, and previously contributed to application development.',
+      // description: 'Worked on NetGuard Cybersecurity Dome, an award-winning XDR security orchestration platform for telecom providers and critical infrastructure. Served as Scrum Master and developer for the DevOps team, and previously contributed to application development.',
       achievements: [
-        'Facilitated agile practices and coordinated cross-team dependencies for timely feature delivery',
-        'Improved Infrastructure as Code using Terraform and enhanced internal provisioning systems',
-        'Developed backend services and user-facing features using TypeScript, React, MongoDB, and GraphQL',
+        'Developed and optimized backend services, reducing latency by 95% and cutting cloud infrastructure costs, improving system performance and cost efficiency.',
+        'Created reusable frontend components using React and TypeScript, cutting development time for new features by 30% and improving maintainability across the application.',
+        'Improved delivery speed by 30% by enhancing CI/CD pipelines and Terraform-based infrastructure, supporting reliable Azure deployments.',
       ],
-      technologies: ['DevOps', 'Azure', 'Terraform', 'TypeScript', 'React', 'MongoDB', 'GraphQL'],
+      technologies: ['DevOps', 'Azure', 'Terraform', 'TypeScript', 'React', 'MongoDB', 'GraphQL', 'CI/CD'],
     },
     {
       company: 'Nokia',
       position: 'Software Developer Co-op',
       period: 'Sep 2022 - Dec 2022',
-      description: 'Developed and tested back-end components of the NetGuard Cybersecurity Dome platform as a co-op student.',
+      // description: 'Developed and tested back-end components of the NetGuard Cybersecurity Dome platform as a co-op student.',
       achievements: [
-        'Completed development and testing of backend services using TypeScript',
-        'Participated in agile software development practices including daily scrums and sprint planning',
+        'Architected and implemented backend features using TypeScript, GraphQL, MongoDB, and KQL, enabling lazy loading, rate limiting, and input validation to deliver secure, high-performance, and scalable solutions.',
       ],
-      technologies: ['TypeScript', 'Kusto Query Language', 'GraphQL'],
+      technologies: ['TypeScript', 'Kusto Query Language', 'GraphQL', 'MongoDB', 'Middleware'],
     },
     {
       company: 'Nokia',
       position: 'Software Developer Co-op',
       period: 'Jan 2022 - Apr 2022',
-      description: 'Developed and tested front-end components of the NetGuard Cybersecurity Dome platform as a co-op student.',
+      // description: 'Developed and tested front-end components of the NetGuard Cybersecurity Dome platform as a co-op student.',
       achievements: [
-        'Completed development and testing of frontend features using React and TypeScript',
-        'Participated in agile software development practices including daily scrums and sprint planning',
+        'Developed and tested responsive, user-friendly frontend features using React, TypeScript, and CSS, delivering intuitive interfaces that enhance usability and overall user experience.',
       ],
-      technologies: ['TypeScript', 'React'],
+      technologies: ['TypeScript', 'React', 'CSS'],
     },
     {
       company: 'Canadian Coast Guard',
       position: 'Computer Engineering Co-op',
       period: 'May 2021 - Aug 2021',
-      description: 'Focused on software quality assurance and test automation for Java-based applications.',
+      // description: 'Focused on software quality assurance and test automation for Java-based applications.',
       achievements: [
-        'Completed unit testing of Java applications using JUnit',
-        'Automated system testing using Python, improving test efficiency',
+        'Automated a year’s worth of untested Java unit and integration tests using JUnit and Python, uncovering a critical bug and completing testing in under one hour.',
       ],
       technologies: ['Java', 'Python', 'JUnit'],
     },
-    {
-      company: 'National Research Council Canada',
-      position: 'Software Engineering Co-op',
-      period: 'Aug 2020 - Dec 2020',
-      description: 'Ported and modernized a large-scale Python application as part of a software migration project.',
-      achievements: [
-        'Ported 23,000 lines of Python code from Python 2.7 to Python 3.7',
-        'Developed graphical user interface using PyQt5 toolkit',
-      ],
-      technologies: ['Python', 'PyQt5'],
-    },
+    // {
+    //   company: 'National Research Council Canada',
+    //   position: 'Software Engineering Co-op',
+    //   period: 'Aug 2020 - Dec 2020',
+    //   description: 'Ported and modernized a large-scale Python application as part of a software migration project.',
+    //   achievements: [
+    //     'Ported 23,000 lines of Python code from Python 2.7 to Python 3.7',
+    //     'Developed graphical user interface using PyQt5 toolkit',
+    //   ],
+    //   technologies: ['Python', 'PyQt5'],
+    // },
   ];
 
   return (
